@@ -22,20 +22,19 @@ export default function Home() {
         <p className="description">
           Get started by editing <code>pages/index.js</code>
         </p>
+        <form action="/form" method="post" onSubmit="{submitData}">
+          <label htmlFor="name">Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label htmlFor="telephone">Telephone</label>
+          <input type="text" id="telephone" name="telephone" required />
+
+          <label htmlFor="message">Message</label>
+          <p> {data} </p>
+
+          <button type="submit">Enregistrer</button>
+         </form>
       </main>
-    
-      <form action="/form" method="post" onSubmit="{submitData}">
-        <label htmlFor="name">Name</label>
-        <input type="text" id="name" name="name" required />
-
-        <label htmlFor="telephone">Telephone</label>
-        <input type="text" id="telephone" name="telephone" required />
-    
-        <label htmlFor="message">Message</label>
-        <p> {data} </p>
-
-        <button type="submit">Enregistrer</button>
-      </form>
 
       <Footer />
     </div>
