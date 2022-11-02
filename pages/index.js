@@ -4,9 +4,9 @@ import Footer from '@components/Footer'
 
 const submitData = async (event) => {
   event.preventDefault();
-  data = "";
+  const data = "";
   alert(`Donnée enregistré: ${event.target.name.value} et ${event.target.telephone.value} `);
-  data += "${event.target.name.value}  ${event.target.telephone.value} /n";
+  data += `${event.target.name.value} , ${event.target.telephone.value} \n`; 
 };
 
 export default function Home() {
@@ -22,7 +22,7 @@ export default function Home() {
         <p className="description">
           Get started by editing <code>pages/index.js</code>
         </p>
-        <form action="/form" method="post" onSubmit="{submitData}">
+        <form action="/form" method="post" onSubmit={submitData}>
           <label htmlFor="name">Name</label>
           <input type="text" id="name" name="name" required />
 
@@ -30,7 +30,7 @@ export default function Home() {
           <input type="text" id="telephone" name="telephone" required />
 
           <label htmlFor="message">Message</label>
-          <p> {data} </p>
+          <p> {target.data.value} </p>
 
           <button type="submit">Enregistrer</button>
          </form>
