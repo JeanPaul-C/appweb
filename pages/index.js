@@ -30,7 +30,6 @@ export default function Home() {
           <input type="text" id="telephone" name="telephone" required />
 
           <label htmlFor="message">Message</label>
-          <p> {target.data.value} </p>
 
           <button type="submit">Enregistrer</button>
          </form>
